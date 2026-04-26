@@ -1,0 +1,452 @@
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology models medical devices, risks, incidents, manufacturers and regulatory risk classes in the healthcare domain." .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Device Catalog Ontology" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#sameAs
+<http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#addressesIncident
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#addressesIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which incident is addressed by a corrective action" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#label> "addresses incident" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which device is affected by an incident" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice> <http://www.w3.org/2000/01/rdf-schema#label> "affects device" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a device to its manufacturer" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturer" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a risk associated with a device" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has risk" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRiskClass
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the regulatory risk classification of a device" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "has risk class" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#locatedIn
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Country> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the country where a manufacturer is located" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "located in" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#relatedToRisk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#relatedToRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the risk involved in an incident" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#relatedToRisk> <http://www.w3.org/2000/01/rdf-schema#label> "related to risk" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#actionDate
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#actionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#actionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#actionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#actionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when a corrective action was taken" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#actionDate> <http://www.w3.org/2000/01/rdf-schema#label> "action date" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#authorizationNumber
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#authorizationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Official authorization number of the manufacturer" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "authorization number" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#deviceID
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#deviceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#deviceID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#deviceID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#deviceID> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique identifier of a device" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#deviceID> <http://www.w3.org/2000/01/rdf-schema#label> "device ID" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#incidentDescription
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#incidentDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Textual description of an incident" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#incidentDescription> <http://www.w3.org/2000/01/rdf-schema#label> "incident description" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#manufacturerName
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#manufacturerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#manufacturerName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#manufacturerName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#manufacturerName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the manufacturer" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#manufacturerName> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturer name" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ActiveDevice
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that requires a source of energy to operate" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Active Device" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#AdverseEvent
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#AdverseEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#AdverseEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#AdverseEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that caused minor or moderate harm" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#AdverseEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Adverse Event" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BiologicalRisk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BiologicalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BiologicalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BiologicalRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "A risk related to biological contamination or reaction" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BiologicalRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Biological Risk" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassA
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassA> <http://www.w3.org/2000/01/rdf-schema#comment> "Lowest risk class for in vitro diagnostic devices" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassA> <http://www.w3.org/2000/01/rdf-schema#label> "Class A" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassB
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassB> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassB> <http://www.w3.org/2000/01/rdf-schema#comment> "Low-medium risk class for in vitro diagnostic devices" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassB> <http://www.w3.org/2000/01/rdf-schema#label> "Class B" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassC
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassC> <http://www.w3.org/2000/01/rdf-schema#comment> "Medium-high risk class for in vitro diagnostic devices" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassC> <http://www.w3.org/2000/01/rdf-schema#label> "Class C" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassD
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassD> <http://www.w3.org/2000/01/rdf-schema#comment> "Highest risk class for in vitro diagnostic devices" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassD> <http://www.w3.org/2000/01/rdf-schema#label> "Class D" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassI
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassI> <http://www.w3.org/2000/01/rdf-schema#comment> "Low risk medical device class" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassI> <http://www.w3.org/2000/01/rdf-schema#label> "Class I" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIII
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIII> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIII> <http://www.w3.org/2000/01/rdf-schema#comment> "High risk medical device class" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIII> <http://www.w3.org/2000/01/rdf-schema#label> "Class III" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIa
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIa> <http://www.w3.org/2000/01/rdf-schema#comment> "Medium-low risk medical device class" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIa> <http://www.w3.org/2000/01/rdf-schema#label> "Class IIa" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIb
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIb> <http://www.w3.org/2000/01/rdf-schema#comment> "Medium-high risk medical device class" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ClassIIb> <http://www.w3.org/2000/01/rdf-schema#label> "Class IIb" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action taken to address an incident" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "Corrective Action" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Country
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A country where a manufacturer is located" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRiskClass> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A general medical device registered in the system" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ElectricalRisk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ElectricalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ElectricalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ElectricalRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "A risk related to electrical components or failures" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ElectricalRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Electrical Risk" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#FieldSafetyNotice
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#FieldSafetyNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#FieldSafetyNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#FieldSafetyNotice> <http://www.w3.org/2000/01/rdf-schema#comment> "A communication issued to inform users about device risks" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#FieldSafetyNotice> <http://www.w3.org/2000/01/rdf-schema#label> "Field Safety Notice" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HighRiskDevice
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HighRiskDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device classified as high risk according to MDR or IVDR" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#label> "High Risk Device" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk classification according to IVDR regulation" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#IVDRRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "IVDR Risk Class" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ImplantableDevice
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device intended to be totally or partially introduced into the human body" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Device" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#InVitroDiagnosticDevice
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#InVitroDiagnosticDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used for in vitro diagnostic purposes under IVDR regulation" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#label> "In Vitro Diagnostic Device" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "An event associated with a device that may cause harm" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> <http://www.w3.org/2000/01/rdf-schema#label> "Incident" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk classification according to MDR regulation" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MDRRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "MDR Risk Class" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization responsible for producing medical devices" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "A risk caused by mechanical failure or malfunction" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Mechanical Risk" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Mechanical_engineering> .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device used for medical purposes under MDR regulation" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Device" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Recall
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Recall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Recall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#CorrectiveAction> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Recall> <http://www.w3.org/2000/01/rdf-schema#comment> "An action to remove a device from the market" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Recall> <http://www.w3.org/2000/01/rdf-schema#label> "Recall" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "A potential hazard associated with a medical device" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification indicating the level of risk of a device" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#RiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Class" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SeriousIncident
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident that caused serious harm or death" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Serious Incident" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SoftwareRisk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SoftwareRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Risk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "A risk caused by software malfunction or bugs" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Software Risk" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BatteryFailureRisk
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BatteryFailureRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BatteryFailureRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BatteryFailureRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk related to battery malfunction" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BatteryFailureRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Battery Failure Risk" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedicalDevice> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedTechCorp> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#BatteryFailureRisk> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device used to monitor heart activity" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX> <http://www.w3.org/2000/01/rdf-schema#label> "Heart Monitor X" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedTechCorp
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedTechCorp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedTechCorp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedTechCorp> <http://www.w3.org/2000/01/rdf-schema#comment> "A company that manufactures medical devices" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedTechCorp> <http://www.w3.org/2000/01/rdf-schema#label> "MedTech Corp" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MedTechCorp> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Medical_device> .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#OverheatingIncident
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#OverheatingIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#OverheatingIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#OverheatingIncident> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HeartMonitorX> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#OverheatingIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident where a device overheats" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#OverheatingIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Overheating Incident" .
+# 
+# http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Spain
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Spain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Country> .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Spain> <http://www.w3.org/2000/01/rdf-schema#comment> "A country in Europe" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Spain> <http://www.w3.org/2000/01/rdf-schema#label> "Spain" .
+<http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Spain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Spain> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/m> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/r> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid10 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid10 <http://www.w3.org/2000/01/rdf-schema#label> "S1" .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid10 <http://www.w3.org/2003/11/swrl#body> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid12 .
+_:genid12 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/r> .
+_:genid12 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#MechanicalRisk> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/r> .
+_:genid14 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> .
+_:genid14 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasRisk> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> .
+_:genid16 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid10 <http://www.w3.org/2003/11/swrl#head> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> .
+_:genid18 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#HighRiskDevice> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid19 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid19 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid19 <http://www.w3.org/2000/01/rdf-schema#label> "S2" .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid19 <http://www.w3.org/2003/11/swrl#body> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> .
+_:genid21 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/i> .
+_:genid21 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#affectsDevice> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/i> .
+_:genid23 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Incident> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid19 <http://www.w3.org/2003/11/swrl#head> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> .
+_:genid25 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid3 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid3 <http://www.w3.org/2000/01/rdf-schema#label> "S3" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid3 <http://www.w3.org/2003/11/swrl#body> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/m> .
+_:genid5 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> .
+_:genid5 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#hasManufacturer> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/d> .
+_:genid7 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Device> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid3 <http://www.w3.org/2003/11/swrl#head> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/m> .
+_:genid9 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog#Manufacturer> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

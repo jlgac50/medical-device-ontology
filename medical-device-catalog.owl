@@ -1,0 +1,1002 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/jose/ontologies/2026/medical-device-catalog">
+    <Prefix name="" IRI="http://www.semanticweb.org/jose/ontologies/2026/3/untitled-ontology-8/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This ontology models medical devices, risks, incidents, manufacturers and regulatory risk classes in the healthcare domain.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Medical Device Catalog Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>v1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ActiveDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AdverseEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BiologicalRisk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassB"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassIII"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassIIa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassIIb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CorrectiveAction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricalRisk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FieldSafetyNotice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HighRiskDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IVDRRiskClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImplantableDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InVitroDiagnosticDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Incident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MDRRiskClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Manufacturer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MechanicalRisk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicalDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Risk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RiskClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeriousIncident"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SoftwareRisk"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#addressesIncident"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affectsDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasManufacturer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRisk"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRiskClass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relatedToRisk"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#actionDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#authorizationNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#deviceID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#incidentDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#manufacturerName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BatteryFailureRisk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HeartMonitorX"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MedTechCorp"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OverheatingIncident"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spain"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ActiveDevice"/>
+        <Class IRI="#MedicalDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AdverseEvent"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BiologicalRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassA"/>
+        <Class IRI="#IVDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassB"/>
+        <Class IRI="#IVDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassC"/>
+        <Class IRI="#IVDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassD"/>
+        <Class IRI="#IVDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassI"/>
+        <Class IRI="#MDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassIII"/>
+        <Class IRI="#MDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassIIa"/>
+        <Class IRI="#MDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassIIb"/>
+        <Class IRI="#MDRRiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasManufacturer"/>
+            <Class IRI="#Manufacturer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Device"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRiskClass"/>
+            <Class IRI="#RiskClass"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricalRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FieldSafetyNotice"/>
+        <Class IRI="#CorrectiveAction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HighRiskDevice"/>
+        <Class IRI="#MedicalDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IVDRRiskClass"/>
+        <Class IRI="#RiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImplantableDevice"/>
+        <Class IRI="#MedicalDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InVitroDiagnosticDevice"/>
+        <Class IRI="#MedicalDevice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MDRRiskClass"/>
+        <Class IRI="#RiskClass"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MechanicalRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalDevice"/>
+        <Class IRI="#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recall"/>
+        <Class IRI="#CorrectiveAction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeriousIncident"/>
+        <Class IRI="#Incident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SoftwareRisk"/>
+        <Class IRI="#Risk"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#MechanicalRisk"/>
+        <NamedIndividual IRI="#BatteryFailureRisk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedicalDevice"/>
+        <NamedIndividual IRI="#HeartMonitorX"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Manufacturer"/>
+        <NamedIndividual IRI="#MedTechCorp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Incident"/>
+        <NamedIndividual IRI="#OverheatingIncident"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Spain"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasManufacturer"/>
+        <NamedIndividual IRI="#HeartMonitorX"/>
+        <NamedIndividual IRI="#MedTechCorp"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasRisk"/>
+        <NamedIndividual IRI="#HeartMonitorX"/>
+        <NamedIndividual IRI="#BatteryFailureRisk"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#affectsDevice"/>
+        <NamedIndividual IRI="#OverheatingIncident"/>
+        <NamedIndividual IRI="#HeartMonitorX"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#addressesIncident"/>
+        <Class IRI="#CorrectiveAction"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#affectsDevice"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasManufacturer"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRisk"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRiskClass"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedIn"/>
+        <Class IRI="#Manufacturer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#relatedToRisk"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#addressesIncident"/>
+        <Class IRI="#Incident"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#affectsDevice"/>
+        <Class IRI="#Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasManufacturer"/>
+        <Class IRI="#Manufacturer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRisk"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRiskClass"/>
+        <Class IRI="#RiskClass"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locatedIn"/>
+        <Class IRI="#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#relatedToRisk"/>
+        <Class IRI="#Risk"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#actionDate"/>
+        <Class IRI="#CorrectiveAction"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#authorizationNumber"/>
+        <Class IRI="#Manufacturer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#deviceID"/>
+        <Class IRI="#Device"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#incidentDescription"/>
+        <Class IRI="#Incident"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#manufacturerName"/>
+        <Class IRI="#Manufacturer"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#actionDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#authorizationNumber"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#deviceID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#incidentDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#manufacturerName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Device"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasRisk"/>
+                <Variable abbreviatedIRI=":d"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#MechanicalRisk"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#HighRiskDevice"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Device"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasManufacturer"/>
+                <Variable abbreviatedIRI=":d"/>
+                <Variable abbreviatedIRI=":m"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Manufacturer"/>
+                <Variable abbreviatedIRI=":m"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Incident"/>
+                <Variable abbreviatedIRI=":i"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#affectsDevice"/>
+                <Variable abbreviatedIRI=":i"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="#Device"/>
+                <Variable abbreviatedIRI=":d"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ActiveDevice</IRI>
+        <Literal>A device that requires a source of energy to operate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActiveDevice</IRI>
+        <Literal>Active Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AdverseEvent</IRI>
+        <Literal>An incident that caused minor or moderate harm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AdverseEvent</IRI>
+        <Literal>Adverse Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BatteryFailureRisk</IRI>
+        <Literal>Risk related to battery malfunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BatteryFailureRisk</IRI>
+        <Literal>Battery Failure Risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BiologicalRisk</IRI>
+        <Literal>A risk related to biological contamination or reaction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BiologicalRisk</IRI>
+        <Literal>Biological Risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassA</IRI>
+        <Literal>Lowest risk class for in vitro diagnostic devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassA</IRI>
+        <Literal>Class A</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassB</IRI>
+        <Literal>Low-medium risk class for in vitro diagnostic devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassB</IRI>
+        <Literal>Class B</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassC</IRI>
+        <Literal>Medium-high risk class for in vitro diagnostic devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassC</IRI>
+        <Literal>Class C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassD</IRI>
+        <Literal>Highest risk class for in vitro diagnostic devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassD</IRI>
+        <Literal>Class D</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassI</IRI>
+        <Literal>Low risk medical device class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassI</IRI>
+        <Literal>Class I</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassIII</IRI>
+        <Literal>High risk medical device class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassIII</IRI>
+        <Literal>Class III</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassIIa</IRI>
+        <Literal>Medium-low risk medical device class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassIIa</IRI>
+        <Literal>Class IIa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ClassIIb</IRI>
+        <Literal>Medium-high risk medical device class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ClassIIb</IRI>
+        <Literal>Class IIb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CorrectiveAction</IRI>
+        <Literal>An action taken to address an incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CorrectiveAction</IRI>
+        <Literal>Corrective Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Country</IRI>
+        <Literal>A country where a manufacturer is located</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Country</IRI>
+        <Literal>Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Device</IRI>
+        <Literal>A general medical device registered in the system</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Device</IRI>
+        <Literal>Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ElectricalRisk</IRI>
+        <Literal>A risk related to electrical components or failures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ElectricalRisk</IRI>
+        <Literal>Electrical Risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FieldSafetyNotice</IRI>
+        <Literal>A communication issued to inform users about device risks</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FieldSafetyNotice</IRI>
+        <Literal>Field Safety Notice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HeartMonitorX</IRI>
+        <Literal>A medical device used to monitor heart activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HeartMonitorX</IRI>
+        <Literal>Heart Monitor X</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HighRiskDevice</IRI>
+        <Literal>A medical device classified as high risk according to MDR or IVDR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HighRiskDevice</IRI>
+        <Literal>High Risk Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IVDRRiskClass</IRI>
+        <Literal>Risk classification according to IVDR regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IVDRRiskClass</IRI>
+        <Literal>IVDR Risk Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImplantableDevice</IRI>
+        <Literal>A device intended to be totally or partially introduced into the human body</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ImplantableDevice</IRI>
+        <Literal>Implantable Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#InVitroDiagnosticDevice</IRI>
+        <Literal>A device used for in vitro diagnostic purposes under IVDR regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InVitroDiagnosticDevice</IRI>
+        <Literal>In Vitro Diagnostic Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Incident</IRI>
+        <Literal>An event associated with a device that may cause harm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Incident</IRI>
+        <Literal>Incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MDRRiskClass</IRI>
+        <Literal>Risk classification according to MDR regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MDRRiskClass</IRI>
+        <Literal>MDR Risk Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Manufacturer</IRI>
+        <Literal>An organization responsible for producing medical devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Manufacturer</IRI>
+        <Literal>Manufacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MechanicalRisk</IRI>
+        <Literal>A risk caused by mechanical failure or malfunction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MechanicalRisk</IRI>
+        <Literal>Mechanical Risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#MechanicalRisk</IRI>
+        <IRI>http://dbpedia.org/resource/Mechanical_engineering</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MedTechCorp</IRI>
+        <Literal>A company that manufactures medical devices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MedTechCorp</IRI>
+        <Literal>MedTech Corp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#MedTechCorp</IRI>
+        <IRI>http://dbpedia.org/resource/Medical_device</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MedicalDevice</IRI>
+        <Literal>A device used for medical purposes under MDR regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MedicalDevice</IRI>
+        <Literal>Medical Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OverheatingIncident</IRI>
+        <Literal>An incident where a device overheats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OverheatingIncident</IRI>
+        <Literal>Overheating Incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Recall</IRI>
+        <Literal>An action to remove a device from the market</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Recall</IRI>
+        <Literal>Recall</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Risk</IRI>
+        <Literal>A potential hazard associated with a medical device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Risk</IRI>
+        <Literal>Risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RiskClass</IRI>
+        <Literal>A classification indicating the level of risk of a device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RiskClass</IRI>
+        <Literal>Risk Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SeriousIncident</IRI>
+        <Literal>An incident that caused serious harm or death</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SeriousIncident</IRI>
+        <Literal>Serious Incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SoftwareRisk</IRI>
+        <Literal>A risk caused by software malfunction or bugs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SoftwareRisk</IRI>
+        <Literal>Software Risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Spain</IRI>
+        <Literal>A country in Europe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Spain</IRI>
+        <Literal>Spain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#Spain</IRI>
+        <IRI>http://dbpedia.org/resource/Spain</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#actionDate</IRI>
+        <Literal>Date when a corrective action was taken</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#actionDate</IRI>
+        <Literal>action date</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#addressesIncident</IRI>
+        <Literal>Indicates which incident is addressed by a corrective action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#addressesIncident</IRI>
+        <Literal>addresses incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#affectsDevice</IRI>
+        <Literal>Indicates which device is affected by an incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#affectsDevice</IRI>
+        <Literal>affects device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#authorizationNumber</IRI>
+        <Literal>Official authorization number of the manufacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#authorizationNumber</IRI>
+        <Literal>authorization number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceID</IRI>
+        <Literal>Unique identifier of a device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#deviceID</IRI>
+        <Literal>device ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasManufacturer</IRI>
+        <Literal>Relates a device to its manufacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasManufacturer</IRI>
+        <Literal>has manufacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasRisk</IRI>
+        <Literal>Indicates a risk associated with a device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRisk</IRI>
+        <Literal>has risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasRiskClass</IRI>
+        <Literal>Indicates the regulatory risk classification of a device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasRiskClass</IRI>
+        <Literal>has risk class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#incidentDescription</IRI>
+        <Literal>Textual description of an incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#incidentDescription</IRI>
+        <Literal>incident description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#locatedIn</IRI>
+        <Literal>Indicates the country where a manufacturer is located</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#locatedIn</IRI>
+        <Literal>located in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#manufacturerName</IRI>
+        <Literal>Name of the manufacturer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#manufacturerName</IRI>
+        <Literal>manufacturer name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#relatedToRisk</IRI>
+        <Literal>Indicates the risk involved in an incident</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#relatedToRisk</IRI>
+        <Literal>related to risk</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI="owl:sameAs"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
